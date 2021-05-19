@@ -7,7 +7,7 @@ class IdsList
 
     def verify(user_id)
         self.ids.each do |id|
-            if id == user_id
+            if id === user_id
                 return true
             end
         end

@@ -1,7 +1,8 @@
-require_relative "barrier"
+# require_relative "barrier"
+require_relative "barrier.rb"
+include Barrier
 
-good_ids = [12, 32, 47, "23A", 51, 87]
-bad_ids = [11, 9, "B67", "b", 19, 22]
+print "Please tell us your id: "
+user_id = gets.chomp
 
-newBarrier = Barrier.new(good_ids, bad_ids)
-puts newBarrier.check_id(32)
+print Barrier.check_id(user_id)
